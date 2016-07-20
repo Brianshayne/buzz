@@ -20,7 +20,7 @@ class App < Sinatra::Application
   use Rack::TwilioWebhookAuthentication, settings.twilio_auth_token, "/call", "/sms"
 
   get "/" do
-    "Nothing to see here"
+    "Fuck you oren"
   end
 
   post "/call" do
