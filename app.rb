@@ -43,6 +43,9 @@ Unlock - add unlock block for 30 minutes
 Unlock NNm - add unlock block for NN minutes
 Unlock NNh - add unlock block for NN hours
       HELP
+    when /\Awake\Z/i
+      response = "I'm awake, I'm awake!"
+    end
     when /\Alock\Z/i
       if (blocks = active_blocks).any?
         blocks.each(&:delete)
