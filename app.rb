@@ -120,7 +120,7 @@ Unlock NNh - add unlock block for NN hours
     logger.info("Event exists (\"#{blocks.first.title}\"), letting guest in!")
 
     twilio.messages.create(from: settings.twilio_number, to: settings.phone_number, body: "Letting guest in!")
-    options = ["https://cdn.shopify.com/s/files/1/0844/4139/files/buzz-sound.wav", "https://cdn.shopify.com/s/files/1/0844/4139/files/door2.wav"]
+    options = ["https://cdn.shopify.com/s/files/1/0844/4139/files/nbcchime.wav", "https://cdn.shopify.com/s/files/1/0844/4139/files/nbcchime.wav"]
     response.Play(options.sample)
   end
 end
