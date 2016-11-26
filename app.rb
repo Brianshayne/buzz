@@ -43,9 +43,6 @@ Unlock - add unlock block for 30 minutes
 Unlock NNm - add unlock block for NN minutes
 Unlock NNh - add unlock block for NN hours
       HELP
-    when /\Awake\Z/i
-      response = "I'm awake, I'm awake!"
-    end
     when /\Alock\Z/i
       if (blocks = active_blocks).any?
         blocks.each(&:delete)
@@ -120,7 +117,7 @@ Unlock NNh - add unlock block for NN hours
     logger.info("Event exists (\"#{blocks.first.title}\"), letting guest in!")
 
     twilio.messages.create(from: settings.twilio_number, to: settings.phone_number, body: "Letting guest in!")
-
-    response.Play("https://cdn.shopify.com/s/files/1/0844/4139/files/buzz-sound.wav")
+    options = ["https://cdn.shopify.com/s/files/1/0844/4139/files/nbcchime.wav", "https://cdn.shopify.com/s/files/1/0844/4139/files/nbcchime.wav"]
+    response.Play(options.sample)
   end
 end
